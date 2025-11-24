@@ -6,23 +6,27 @@ import CarDetails from './pages/CarDetails'
 import Cars from './pages/Cars'
 import MyBookings from './pages/MyBookings'
 import Footer from './components/Footer'
+import Login from './components/Login'
 
 const App = () => {
-  const [showLogin,setShowLogin] = useState(false)
+  const [showLogin, setShowLogin] = useState(false)
   const isOwnerPath = useLocation().pathname.startsWith('/owner')
   return (
     <>
+
+      {showLogin && <Login setShowLogin={setShowLogin} />}
+ 
       {!isOwnerPath && < Navbar setShowLogin={setShowLogin} />}
 
       <Routes>
-        <Route path='/' element={<Home/>}/>
-        <Route path='/car-details/:id' element={<CarDetails/>}/>
-        <Route path='/cars' element={<Cars/>}/>
-        <Route path='/my-bookings' element={<MyBookings/>}/>
+        <Route path='/' element={<Home />} />
+        <Route path='/car-details/:id' element={<CarDetails />} />
+        <Route path='/cars' element={<Cars />} />
+        <Route path='/my-bookings' element={<MyBookings />} />
 
       </Routes>
-      {!isOwnerPath && <Footer/>}
-      
+      {!isOwnerPath && <Footer />}
+
     </>
   )
 }
