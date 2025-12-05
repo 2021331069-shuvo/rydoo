@@ -31,8 +31,8 @@ export const registerUser = async (req, res) => {
 
 
   } catch (error) {
-    console.log(error.message)
-    return res.json({ success: false, message: error.message });
+    console.log(error.message);
+    return res.json({ success: false, message: error.message })
     
   }
 }
@@ -55,8 +55,20 @@ export const loginUser = async (req, res) => {
     const token = generateToken(user._id.toString());
     return res.json({ success: true, token });
   } catch (error) {
-    console.log(error.message)
-    return res.json({ success: false, message: error.message });
+    console.log(error.message);
+    return res.json({ success: false, message: error.message })
+    
+  }
+}
+
+export const getUserData =async(req,res) =>{
+  try{
+    const{user} = req;
+    res.json({success: true, user})
+  }
+  catch (error) {
+    console.log(error.message);
+    return res.json({ success: false, message: error.message })
     
   }
 }
