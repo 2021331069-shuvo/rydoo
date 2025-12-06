@@ -1,7 +1,7 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
-import NavbarOwner from "../../components/Owner/NavbarOwner";
-import Sidebar from "../../components/Owner/Sidebar";
+import NavbarOwner from "../../components/owner/NavbarOwner";
+import Sidebar from "../../components/owner/Sidebar";
 
 const Layout = () => {
   return (
@@ -9,10 +9,10 @@ const Layout = () => {
       <NavbarOwner />
 
       <div className="flex">
-        {/* Fixed sidebar */}
+        
         <Sidebar />
 
-        {/* Right content, shifted by sidebar width */}
+       
         <main className="flex-1 ml-52 md:ml-60 p-4">
           <Outlet />
         </main>
