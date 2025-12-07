@@ -95,7 +95,7 @@ const AddCar = () => {
             />
           </div>
           <div className='flex flex-col'>
-            <label>Daily Price ({currency})</label>
+            <label>Daily Price (TK)</label>
             <input
               type='number'
               placeholder='100'
@@ -165,7 +165,7 @@ const AddCar = () => {
           <label>Location</label>
           <input
             type='text'
-            placeholder='e.g. San Francisco, CA'
+            placeholder='e.g. Dhaka, Rajshahi'
             required
             className='px-3 py-2 mt-1 border border-borderColor rounded-md outline-none'
             value={car.location}
