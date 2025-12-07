@@ -7,11 +7,11 @@ const CarDetails = () => {
   const { id } = useParams();
   const navigate = useNavigate();
   const [car, setCar] = useState(null);
-  const currency = import.meta.env.VITE_CURRENCY; 
+  const currency = import.meta.env.VITE_CURRENCY; // Correct usage for environment variable
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-   
+    // Handle booking logic here
   };
 
   useEffect(() => {

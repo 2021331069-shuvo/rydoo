@@ -62,7 +62,7 @@ const Dashboard = () => {
       </div>
 
       <div className='grid md:grid-cols-2 gap-6 mb-10'>
-       
+        {/* recent bookings */}
         <div className='p-4 md:p-6 border border-borderColor rounded-md max-w-lg w-full'>
           <h1 className='text-lg font-medium'>Recent Bookings</h1>
           <p className='text-gray-500'>Latest customer bookings</p>
@@ -92,8 +92,8 @@ const Dashboard = () => {
 
               <div className='flex items-center gap-2 font-medium'>
                 <p className='text-sm text-gray-500'>
-                  
-                  TK.{booking.price}
+                  {currency}
+                  {booking.price}
                 </p>
                 <p className='px-3 py-0.5 border border-borderColor rounded-full text-sm'>
                   {booking.status}
@@ -103,12 +103,13 @@ const Dashboard = () => {
           ))}
         </div>
 
+        {/* monthly revenue */}
         <div className='p-4 md:p-6 mb-6 border border-borderColor rounded-md w-full md:max-w-xs'>
           <h1 className='text-lg font-medium'>Monthly Revenue</h1>
           <p className='text-gray-500'>Revenue for current month</p>
           <p className='text-3xl mt-6 font-semibold text-primary'>
-            
-            TK.{data.monthlyRevenue}
+            {currency}
+            {data.monthlyRevenue}
           </p>
         </div>
       </div>
